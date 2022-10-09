@@ -1,0 +1,15 @@
+import React, { useEffect } from "react";
+import { useParams,useNavigate } from "react-router-dom";
+
+function Redirect() {
+  const navigate = useNavigate();
+  const { id } = useParams();
+
+  useEffect(() => {
+    navigate(`/restaurant/${id}/overview`);
+  });
+
+  return <div></div>;
+}
+
+export default Redirect;
